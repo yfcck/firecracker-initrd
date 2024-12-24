@@ -54,7 +54,7 @@ rootfs_alpine() {
 							openssh \
 							grep"
 
-	apk -X "http://dl-5.alpinelinux.org/alpine/latest-stable/main" -U --allow-untrusted --root ${rootfsDir} --initdb \
+	apk -X "http://dl-5.alpinelinux.org/alpine/v3.8/main" -U --allow-untrusted --root ${rootfsDir} --initdb \
 		add $pkgs
 
 	cd ${rootfsDir}
