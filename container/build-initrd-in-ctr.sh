@@ -266,7 +266,7 @@ main() {
 		compressor="tee"
 	fi
 
-	{ cd $rootfsDir; find . -print0 | cpio --null --create --verbose --format=newc | ${compressor} > ${buildDir}/${initrdFile}; cd - >/dev/null; }
+	{ cd $rootfsDir; find . -print0 | cpio --create --verbose --format=newc | ${compressor} > ${buildDir}/${initrdFile}; cd - >/dev/null; }
 
 	cd - >/dev/null
 
