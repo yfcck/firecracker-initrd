@@ -19,10 +19,10 @@ else
 	exit 127
 fi
 
-mkdir -p $buildDir
+mkdir -p $rootfsDir
 
 $ctrEngine run \
-	-it --rm \
+	-it --rm --privileged=true -u=root\
 	-v${buildDir}:/build \
 	-v`pwd`/container:/container:ro \
 	-v`pwd`/container/${builder}:${builder}:ro \
