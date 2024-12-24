@@ -106,7 +106,7 @@ EOF
 		# Add apk repositories
 		cp /etc/apk/repositories ./etc/apk/repositories
 
-		chroot $rootfsDir /bin/sh -c 'echo -e "fengfeng\nfengfeng" | passwd root'
+		chroot $rootfsDir /bin/sh -c 'echo -e "root11111\nroot11111" | passwd root'
 
 	fi # [ -n "$addNetwork" ]
 
