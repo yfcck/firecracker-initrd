@@ -27,6 +27,6 @@ $ctrEngine run \
 	-v`pwd`/container:/container:ro \
 	-v`pwd`/container/${builder}:${builder}:ro \
 	-v`pwd`/guest:/guest:ro \
-	alpine:latest \
+	alpine:3.8 \
 	${builder} $@
 
